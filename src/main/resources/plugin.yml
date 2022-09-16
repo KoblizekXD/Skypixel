@@ -1,0 +1,4 @@
+name: Skypixel
+version: '${project.version}'
+main: com.koblizek.skypixel.Skypixel
+api-version: 1.19
