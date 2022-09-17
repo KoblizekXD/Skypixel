@@ -26,12 +26,27 @@ public final class TextUtils {
         return string.replace(a, b);
     }
     public static String createRarity(ItemUtil.ItemRarity rarity, ItemUtil.ItemType type, boolean recombobulated) {
-        if (recombobulated) {
-            return rarity.getBoldColor() + rarity.toString().replaceAll("_", " ") + " " + type.toString().replaceAll("_", " ");
+        if (!recombobulated) {
+            return ChatColor.translateAlternateColorCodes(
+                    '&',
+                    rarity.getBoldColor() + rarity.toString().replaceAll("_", " ") + " "
+                            + type.toString().replaceAll("_", " ")
+            );
         } else {
-            return rarity.getBoldColor() + "" + ChatColor.MAGIC +
-                    rarity.toString().replaceAll("_", " ") + " " +
-                    type.toString().replaceAll("_", " ") + " " + ChatColor.MAGIC;
+            return ChatColor.translateAlternateColorCodes(
+                    '&',
+                    rarity.getBoldColor()
+                    + "&kX&r "
+                    + rarity.getBoldColor()
+                    + rarity.toString().replaceAll("_", " ")
+                    + " "
+                    + type.toString().replaceAll("_", " ")
+                    + " "
+                    + "&kX"
+            );
         }
+    }
+    public static String addReforgeLoreText() {
+        return ChatColor.translateAlternateColorCodes('&', "&7This item can be reforged!");
     }
 }

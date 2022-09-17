@@ -28,7 +28,7 @@ public final class ItemUtil {
 
         private final String boldColor;
         ItemRarity(ChatColor color) {
-            this.boldColor = ChatColor.BOLD + "" + color;
+            this.boldColor = "&"+color.getChar()+"&l";
         }
         public String getBoldColor() {
             return boldColor;
