@@ -1,5 +1,6 @@
 package com.koblizek.skypixel;
 
+import com.koblizek.skypixel.commands.TestItemCommand;
 import com.koblizek.skypixel.core.SkyblockPlayer;
 import com.koblizek.skypixel.core.util.PlayerList;
 import org.bukkit.Bukkit;
@@ -18,6 +19,7 @@ public final class Skypixel extends JavaPlugin implements Listener {
         PLUGIN = this;
 
         Bukkit.getPluginManager().registerEvents(this, this);
+        Bukkit.getPluginCommand("test").setExecutor(new TestItemCommand());
     }
 
     @Override
