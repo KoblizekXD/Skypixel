@@ -16,6 +16,14 @@ public class PlayerList extends ArrayList<SkyblockPlayer> {
         }
         return null;
     }
+    public SkyblockPlayer getSkyblockPlayer(Player player) {
+        for (SkyblockPlayer skyblockPlayer : this) {
+            if (skyblockPlayer.toPlayer().equals(player)) {
+                return skyblockPlayer;
+            }
+        }
+        return null;
+    }
     public void removePlayer(Player player) {
         for (SkyblockPlayer skyblockPlayer : this) {
             if (skyblockPlayer.toPlayer().equals(player)) {

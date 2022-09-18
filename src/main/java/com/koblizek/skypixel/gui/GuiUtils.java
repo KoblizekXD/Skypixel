@@ -1,6 +1,7 @@
 package com.koblizek.skypixel.gui;
 
 import com.koblizek.skypixel.core.SkyblockPlayer;
+import com.koblizek.skypixel.core.util.TextUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -28,7 +29,8 @@ public final class GuiUtils {
                 .setScore(7);
         objective.getScore(" " + ChatColor.GRAY + skyblockTime)
                 .setScore(6);
-        objective.getScore(" " + ChatColor.GRAY + "⏣ " + playerPosition)
+        objective.getScore(" " + ChatColor.GRAY + "⏣ "+ skyblockPlayer.getLocation().getColor() + TextUtils.capitalizeWord(skyblockPlayer.getLocation().toString().replace('_', ' ')
+                        .toLowerCase()))
                 .setScore(5);
         objective.getScore("  ")
                 .setScore(4);

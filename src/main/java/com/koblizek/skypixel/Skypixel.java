@@ -1,5 +1,6 @@
 package com.koblizek.skypixel;
 
+import com.koblizek.skypixel.commands.SetLocationCommand;
 import com.koblizek.skypixel.commands.TestItemCommand;
 import com.koblizek.skypixel.core.SkyblockPlayer;
 import com.koblizek.skypixel.core.util.BukkitExecutors;
@@ -21,6 +22,7 @@ public final class Skypixel extends JavaPlugin implements Listener {
 
         Bukkit.getPluginManager().registerEvents(this, this);
         Bukkit.getPluginCommand("test").setExecutor(new TestItemCommand());
+        Bukkit.getPluginCommand("location").setExecutor(new SetLocationCommand());
     }
 
     @Override
