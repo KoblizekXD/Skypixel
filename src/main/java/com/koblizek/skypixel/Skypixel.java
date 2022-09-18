@@ -2,6 +2,7 @@ package com.koblizek.skypixel;
 
 import com.koblizek.skypixel.commands.TestItemCommand;
 import com.koblizek.skypixel.core.SkyblockPlayer;
+import com.koblizek.skypixel.core.util.BukkitExecutors;
 import com.koblizek.skypixel.core.util.PlayerList;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -29,7 +30,9 @@ public final class Skypixel extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        PlayerList.PLAYERS.add(new SkyblockPlayer(event.getPlayer()));
+        SkyblockPlayer player = new SkyblockPlayer(event.getPlayer());
+        PlayerList.PLAYERS.add(player);
+        BukkitExecutors.createNew(player);
     }
     @EventHandler
     public void onPlayerLeft(PlayerQuitEvent event) {

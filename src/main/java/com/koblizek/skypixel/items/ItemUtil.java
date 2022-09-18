@@ -10,10 +10,12 @@ public final class ItemUtil {
         LEGGINGS,
         BOOTS,
         SWORD,
-        LONG_SWORD,
+        LONGSWORD,
         BOW,
         SHORTBOW,
-        WAND
+        WAND,
+        ENRICHMENT,
+        ACCESSORY
     }
     public enum ItemRarity {
         COMMON(ChatColor.WHITE),
@@ -21,6 +23,7 @@ public final class ItemUtil {
         RARE(ChatColor.BLUE),
         EPIC(ChatColor.DARK_PURPLE),
         LEGENDARY(ChatColor.GOLD),
+        MYTHIC(ChatColor.LIGHT_PURPLE),
         DIVINE(ChatColor.AQUA),
         SPECIAL(ChatColor.RED),
         VERY_SPECIAL(ChatColor.RED),

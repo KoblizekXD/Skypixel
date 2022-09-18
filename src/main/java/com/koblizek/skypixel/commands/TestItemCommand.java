@@ -21,7 +21,7 @@ public class TestItemCommand implements CommandExecutor {
         ItemMeta meta = apple.getItemMeta();
 
         meta.setLore(List.of(
-                TextUtils.createRarity(ItemUtil.ItemRarity.DIVINE, ItemUtil.ItemType.LONG_SWORD, true)
+                TextUtils.createRarity(ItemUtil.ItemRarity.DIVINE, ItemUtil.ItemType.LONGSWORD, true)
         ));
 
         apple.setItemMeta(meta);
