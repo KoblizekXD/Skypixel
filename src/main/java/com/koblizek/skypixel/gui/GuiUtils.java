@@ -16,7 +16,6 @@ public final class GuiUtils {
         String serverName = "m000";
         String skyblockDate = "January 1st";
         String skyblockTime = "1:1";
-        String playerPosition = "NULL";
 
         Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
         Objective objective = scoreboard.registerNewObjective("skyblock", "dummy", ChatColor.translateAlternateColorCodes('&', "&e&lSKYBLOCK"));
@@ -34,7 +33,7 @@ public final class GuiUtils {
                 .setScore(5);
         objective.getScore("  ")
                 .setScore(4);
-        objective.getScore("BANK INFO TODO")
+        objective.getScore("Purse: " + ChatColor.GOLD + skyblockPlayer.getPurse().get())
                 .setScore(3);
         objective.getScore("   ")
                 .setScore(2);

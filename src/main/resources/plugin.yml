@@ -7,3 +7,5 @@ commands:
     usage: /test
   location:
     usage: /location <location>
+  scoreboardreload:
+    usage: /scoreboardreload
