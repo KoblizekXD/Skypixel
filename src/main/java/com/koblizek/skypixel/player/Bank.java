@@ -12,6 +12,7 @@ public class Bank implements TradeableEconomyElement, Gettable<Integer> {
 
     @Override
     public void transfer(TradeableEconomyElement element, int amount) {
+        if (amount > COINS) return;
         element.addAmount(amount);
         COINS = COINS - amount;
     }
@@ -34,6 +35,7 @@ public class Bank implements TradeableEconomyElement, Gettable<Integer> {
 
     @Override
     public void removeAmount(int amount) {
+        if (amount > COINS) return;
         COINS = COINS - amount;
     }
 

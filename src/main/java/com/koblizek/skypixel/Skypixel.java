@@ -1,8 +1,6 @@
 package com.koblizek.skypixel;
 
-import com.koblizek.skypixel.commands.ReloadScoreboardCommand;
-import com.koblizek.skypixel.commands.SetLocationCommand;
-import com.koblizek.skypixel.commands.TestItemCommand;
+import com.koblizek.skypixel.commands.*;
 import com.koblizek.skypixel.core.SkyblockPlayer;
 import com.koblizek.skypixel.core.util.BukkitExecutors;
 import com.koblizek.skypixel.core.util.PlayerList;
@@ -25,6 +23,8 @@ public final class Skypixel extends JavaPlugin implements Listener {
         Bukkit.getPluginCommand("test").setExecutor(new TestItemCommand());
         Bukkit.getPluginCommand("location").setExecutor(new SetLocationCommand());
         Bukkit.getPluginCommand("scoreboardreload").setExecutor(new ReloadScoreboardCommand());
+        Bukkit.getPluginCommand("setcoins").setExecutor(new SetCoinsCommand());
+        Bukkit.getPluginCommand("transfercoins").setExecutor(new TransferCoinsCommand());
     }
 
     @Override

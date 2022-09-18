@@ -9,3 +9,7 @@ commands:
     usage: /location <location>
   scoreboardreload:
     usage: /scoreboardreload
+  setcoins:
+    usage: /setcoins <type> <amount>
+  transfercoins:
+    usage: /transfercoins <from> <amount>
