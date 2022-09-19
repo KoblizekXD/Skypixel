@@ -59,4 +59,13 @@ public final class TextUtils {
         }
         return capitalizeWord.trim();
     }
+    public static final String[] ORDINALS = new String[] {"th","st","nd","rd","th"};
+    public static String whichOrdinal(int number) {
+        if (number == 11 || number == 12 || number == 13) return ORDINALS[0];
+        int k = number % 10;
+        if(k >= 4)
+            return ORDINALS[4];
+        else
+            return ORDINALS[k];
+    }
 }
